@@ -34,6 +34,7 @@ Optionals:
 - [ ] Reward system for using app/reaching milestones in games
 
 Data Schematic:
+![UML Diagram](VenatusUML1.png "UML Diagram")
 
 
 Considerations: 
