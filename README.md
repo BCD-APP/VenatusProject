@@ -8,11 +8,11 @@
 
 #####Required User Stories:
 - [ ] Creating a Venatus Theme.
-- [ ] Users can login to access the rest of the app
-- [ ] Registration Page
-- [ ] User can Logout 
-- [ ] User can Login using Steam.
-- [ ] User Profile
+- [x] Users can login to access the rest of the app
+- [x] Registration Page
+- [x] User can Logout 
+- [x] User Profile
+- [x] User can set a profile picture
 - [ ] Standard Social Media Features Implemented.  
 - [ ] User can add games to his profile from Steam & League of Legends
 - [ ] News Feed supplemented with Twittter API
@@ -22,6 +22,7 @@
 - [ ] Gaming Meetups
 
 #####Optionals:
+- [ ] User can Login using Steam.
 - [ ] Incorporating PayPal to allow users to buy company cryptocurrency (ie, Ingame Currencies)
 - [ ] Tournament Registration/Brackets
 - [ ] Add more games to the add game function
