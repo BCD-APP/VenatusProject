@@ -49,7 +49,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func onSetAvatar(sender: UIButton) {
         //let newImage = Post.resize(avatarImage.image!, newSize: CGSize(width:100, height:100))
-        //let PFAvatar = Post.getPFFileFromImage(newImage)
+        //let PFAvatar = Post.getPFFileFromImage(newImage))
         let imageData: NSData = UIImageJPEGRepresentation(avatarImage.image!, 1.0)!
         let imageFile: PFFile = PFFile(name:"image.jpg", data:imageData)!
         imageFile.saveInBackgroundWithBlock(){(success: Bool, error: NSError?)-> Void in
