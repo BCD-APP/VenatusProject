@@ -16,6 +16,11 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet var registerButton: UIButton!
     
+    
+    @IBOutlet var avatarImage: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +51,7 @@ class RegistrationViewController: UIViewController {
         newUser.password = passwordTextField.text
         print(passwordTextField.text)
         print(newUser)
+        //newUser["avatar"] = Post.getPFFileFromImage(avatarImage.image!)
         newUser.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?)-> Void in
             print(newUser)
 
@@ -59,6 +65,7 @@ class RegistrationViewController: UIViewController {
                     print("Username is taken")
                 }else{
                     print(newUser)
+                    print("ERROR")
                     print(error?.localizedDescription)
                     
                 }

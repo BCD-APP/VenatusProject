@@ -19,17 +19,19 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MO-cE-vVB">
                                 <rect key="frame" x="101" y="426" width="118" height="51"/>
-                                <state key="normal" title="Button" image="steamlogin"/>
+                                <state key="normal" title="asd">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="onSteamLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLy-NB-pfO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMR-cW-D57">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Zhi" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMR-cW-D57">
                                 <rect key="frame" x="66" y="178" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-nn-Uqu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-nn-Uqu">
                                 <rect key="frame" x="66" y="280" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -135,12 +137,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Contacts-50" translatesAutoresizingMaskIntoConstraints="NO" id="zSc-7X-MfE">
+                                <rect key="frame" x="110" y="434" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Sad-3p-oTS"/>
+                                    <constraint firstAttribute="height" constant="100" id="dAb-6j-6PQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="DWE-MS-D9c"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="avatarImage" destination="zSc-7X-MfE" id="jei-d6-jbu"/>
                         <outlet property="passwordTextField" destination="23H-q1-s6f" id="8dd-MQ-RNx"/>
                         <outlet property="registerButton" destination="hHb-HJ-2RC" id="cG3-pl-JqX"/>
                         <outlet property="usernameTextField" destination="Rs1-Wm-86F" id="Rwj-au-Vvv"/>
@@ -151,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="222" y="1118"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="h8v-zS-PtK">
             <objects>
                 <viewController id="Rfr-tl-dYW" customClass="ProfileViewController" customModule="Venatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,16 +172,56 @@
                     <view key="view" contentMode="scaleToFill" id="mEv-dR-jcx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacts-50" translatesAutoresizingMaskIntoConstraints="NO" id="QOy-AY-vE6">
+                                <rect key="frame" x="110" y="28" width="100" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6k-Lw-LoT">
+                                <rect key="frame" x="127" y="313" width="67" height="30"/>
+                                <state key="normal" title="SetAvatar"/>
+                                <connections>
+                                    <action selector="onSetAvatar:" destination="Rfr-tl-dYW" eventType="touchUpInside" id="9Kx-SG-043"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-Cf-igF">
+                                <rect key="frame" x="136" y="444" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="Rfr-tl-dYW" eventType="touchUpInside" id="14U-3w-FE4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwM-vN-MuU">
+                                <rect key="frame" x="20" y="237" width="85" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="onTakePhoto:" destination="Rfr-tl-dYW" eventType="touchUpInside" id="Uff-48-66Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-Hl-SEL">
+                                <rect key="frame" x="142" y="237" width="158" height="30"/>
+                                <state key="normal" title="Set Photo From Library"/>
+                                <connections>
+                                    <action selector="onSelectPhoto:" destination="Rfr-tl-dYW" eventType="touchUpInside" id="cPu-H1-8Ue"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="BwF-yR-kJa"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="BwF-yR-kJa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="avatarImage" destination="QOy-AY-vE6" id="yZO-JR-3Q5"/>
+                        <outlet property="cameraButton" destination="DwM-vN-MuU" id="ylQ-Uj-mGY"/>
+                        <outlet property="logoutButton" destination="1xU-Cf-igF" id="omy-fc-LZo"/>
+                        <outlet property="photoLibraryButton" destination="zrE-Hl-SEL" id="uGl-8e-Jos"/>
+                        <outlet property="setAvatarButton" destination="K6k-Lw-LoT" id="TYc-RU-7gy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bM-GB-I4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="690"/>
         </scene>
-        <!--Main-->
+        <!--Main View Controller-->
         <scene sceneID="u65-ju-16u">
             <objects>
                 <viewController id="k4N-PL-vwC" customClass="MainViewController" customModule="Venatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,7 +250,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="pKP-kg-OHF"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="pKP-kg-OHF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="Pc7-fx-VUh" kind="show" id="nFQ-TY-Z08"/>
@@ -250,7 +300,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="steamlogin" width="118" height="51"/>
+        <image name="Contacts-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Usd-4k-73E"/>
