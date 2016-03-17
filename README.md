@@ -11,10 +11,9 @@
 - [x] Users can login to access the rest of the app
 - [x] Registration Page
 - [x] User can Logout 
-- [x] User Profile
+- [ ] User can set profile information
 - [x] User can set a profile picture
 - [ ] Standard Social Media Features Implemented.  
-- [ ] User can add games to his profile from Steam & League of Legends
 - [ ] News Feed supplemented with Twittter API
 - [ ] Users can make posts, with pictures, videos , streams etc.
 - [ ] Settings/Profile View to set users preferences and link various other sources
@@ -23,6 +22,7 @@
 
 #####Optionals:
 - [ ] User can Login using Steam.
+- [ ] User can add games to his profile from Steam & League of Legends
 - [ ] Incorporating PayPal to allow users to buy company cryptocurrency (ie, Ingame Currencies)
 - [ ] Tournament Registration/Brackets
 - [ ] Add more games to the add game function
