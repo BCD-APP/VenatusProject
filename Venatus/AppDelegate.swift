@@ -12,7 +12,7 @@ import Parse
 
 let AppId = "Venatus"
 let masterKey = "jdiasogfo8eytr87ygrheuifewog"
-let serverUrl = "http://venatus.herokuapp.com/parse"
+let serverUrl = "https://evening-anchorage-93315.herokuapp.com/parse"
 
 
 @UIApplicationMain
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = serverUrl
             })
         )
+
         // Override point for customization after application launch.
         return true
     }

@@ -5,7 +5,8 @@
 
 target 'Venatus' do
     pod 'Parse'
-
+    pod 'AFNetworking'
+    #    pod 'BDBOAuth1Manager', '2.0.0'
 
 end
 

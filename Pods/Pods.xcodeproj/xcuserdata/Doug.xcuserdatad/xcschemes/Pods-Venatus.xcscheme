@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4219B232D255D33A44BCA2C5'
+               BlueprintIdentifier = 'A9D45F183C480E519A68BEE0'
                BlueprintName = 'Pods-Venatus'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Venatus.framework'>
