@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     
-    
+    let user = PFUser.currentUser()
     
     
     
@@ -36,7 +36,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         vc!.delegate = self
         vc!.allowsEditing = true
         // Do any additional setup after loading the view.
-        
+        if let avatar = user?.valueForKey("avatar") as? PFFile{
+            avatar.getDataInBackgroundWithBlock(){(imageData: NSData?, error: NSError?)->Void in
+                if(error == nil){
+                    print("Set avatar display")
+                    self.avatarImage.image = UIImage(data: imageData!)
+                }else{
+                    print("At this point, logically, theres no avatar image so we just leave default?")
+                }
+                
+            }
+        }
         
     }
 
@@ -48,34 +58,26 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func onSetAvatar(sender: UIButton) {
-        //let newImage = Post.resize(avatarImage.image!, newSize: CGSize(width:100, height:100))
-        //let PFAvatar = Post.getPFFileFromImage(newImage))
+
         let imageData: NSData = UIImageJPEGRepresentation(avatarImage.image!, 1.0)!
         let imageFile: PFFile = PFFile(name:"image.jpg", data:imageData)!
         imageFile.saveInBackgroundWithBlock(){(success: Bool, error: NSError?)-> Void in
-            print("First completion block")
             if success{
-                print("First completion block v")
-                let user = PFUser.currentUser()
-                user!.setObject(imageFile, forKey: "avatar")
+                //let user = PFUser.currentUser()
+                self.user!.setObject(imageFile, forKey: "avatar")
                 print("Potato")
-                user!.saveInBackgroundWithBlock(){(success: Bool, error:NSError?)->Void in
-                    print("Second Completion block")
+                self.user!.saveInBackgroundWithBlock(){(success: Bool, error:NSError?)->Void in
                     if success{
-                        print("Secomd completion block v")
                         print("Saved")
                     }else{
-                        print("error again")
-                        //print(error)
+                        print(error)
                     }
                     
                 }
             }else{
-                print("ERROR")
                 print(error)
             }
         }
-        //user!["avatar"] = PFAvatar
 
     }
     
