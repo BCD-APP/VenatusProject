@@ -7,14 +7,14 @@
 ###User Stories:
 
 #####Required User Stories:
-- [ ] Creating a Venatus Theme.
+- [x] Creating a Venatus Theme.
 - [x] Users can login to access the rest of the app
 - [x] Registration Page
 - [x] User can Logout 
 - [ ] User can set profile information
 - [x] User can set a profile picture
 - [ ] Standard Social Media Features Implemented.  
-- [ ] News Feed supplemented with Twittter API
+- [ ] News Feed supplemented with Twitter API
 - [ ] Users can make posts, with pictures, videos , streams etc.
 - [ ] Settings/Profile View to set users preferences and link various other sources
 - [ ] Chat Client
