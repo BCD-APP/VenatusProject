@@ -14,16 +14,20 @@ PODS:
   - AFNetworking/Serialization (3.0.0)
   - AFNetworking/UIKit (3.0.0):
     - AFNetworking/NSURLSession
+  - BDBOAuth1Manager (2.0.0):
+    - AFNetworking/NSURLSession (~> 3.0.0)
   - Bolts/Tasks (1.6.0)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
 
 DEPENDENCIES:
   - AFNetworking
+  - BDBOAuth1Manager
   - Parse
 
 SPEC CHECKSUMS:
   AFNetworking: 932ff751f9d6fb1dad0b3af58b7e3ffba0a4e7fd
+  BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
 
