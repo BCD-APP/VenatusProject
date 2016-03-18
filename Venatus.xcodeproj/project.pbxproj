@@ -24,6 +24,9 @@
 		918297521C8FCFA700AC4266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918297501C8FCFA700AC4266 /* LaunchScreen.storyboard */; };
 		91A7315C1C983C5E009D4E44 /* SteamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7315B1C983C5E009D4E44 /* SteamClient.swift */; };
 		91B0CBE51C99A4160068F948 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */; };
+		91E8A9171C9B929100564DA2 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8A9161C9B929100564DA2 /* TwitterClient.swift */; };
+		91E8A9191C9B930E00564DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8A9181C9B930E00564DA2 /* User.swift */; };
+		91E8A91B1C9B932E00564DA2 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8A91A1C9B932E00564DA2 /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		918297531C8FCFA700AC4266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A7315B1C983C5E009D4E44 /* SteamClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteamClient.swift; sourceTree = "<group>"; };
 		91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		91E8A9161C9B929100564DA2 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		91E8A9181C9B930E00564DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		91E8A91A1C9B932E00564DA2 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		9B48B66F24CEBD409AE8D1A9 /* Pods-Venatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Venatus/Pods-Venatus.release.xcconfig"; sourceTree = "<group>"; };
 		B286B455C632B8369228D17C /* Pods_Venatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Venatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +124,7 @@
 		918297461C8FCFA700AC4266 /* Venatus */ = {
 			isa = PBXGroup;
 			children = (
+				91E8A9151C9B927B00564DA2 /* API */,
 				916E83551C8FE78F00B33DB7 /* Models */,
 				916E83531C8FE77700B33DB7 /* Views */,
 				918297471C8FCFA700AC4266 /* AppDelegate.swift */,
@@ -127,6 +134,16 @@
 				918297531C8FCFA700AC4266 /* Info.plist */,
 			);
 			path = Venatus;
+			sourceTree = "<group>";
+		};
+		91E8A9151C9B927B00564DA2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				91E8A9161C9B929100564DA2 /* TwitterClient.swift */,
+				91E8A9181C9B930E00564DA2 /* User.swift */,
+				91E8A91A1C9B932E00564DA2 /* Tweet.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		E825AE1C8D48C759E61B0927 /* Frameworks */ = {
@@ -264,15 +281,18 @@
 				917C32BD1C90FDAF00D4027D /* Game.swift in Sources */,
 				916E83631C8FEBDC00B33DB7 /* Profile.swift in Sources */,
 				916E835B1C8FE81200B33DB7 /* ViewingProfileViewController.swift in Sources */,
+				91E8A9171C9B929100564DA2 /* TwitterClient.swift in Sources */,
 				91B0CBE51C99A4160068F948 /* RegistrationViewController.swift in Sources */,
 				916E835F1C8FEA5300B33DB7 /* Format.swift in Sources */,
 				917C32BF1C9103A800D4027D /* NewsParser.swift in Sources */,
+				91E8A9191C9B930E00564DA2 /* User.swift in Sources */,
 				916E835D1C8FE83500B33DB7 /* ProfileViewController.swift in Sources */,
 				916E83611C8FEA9A00B33DB7 /* News.swift in Sources */,
 				918297481C8FCFA700AC4266 /* AppDelegate.swift in Sources */,
 				91A7315C1C983C5E009D4E44 /* SteamClient.swift in Sources */,
 				916E83591C8FE7FC00B33DB7 /* MainViewController.swift in Sources */,
 				917C32BB1C90EB1B00D4027D /* Post.swift in Sources */,
+				91E8A91B1C9B932E00564DA2 /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

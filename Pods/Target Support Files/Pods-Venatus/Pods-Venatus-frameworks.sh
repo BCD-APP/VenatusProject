@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Venatus/AFNetworking.framework"
+  install_framework "Pods-Venatus/BDBOAuth1Manager.framework"
   install_framework "Pods-Venatus/Bolts.framework"
   install_framework "Pods-Venatus/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Venatus/AFNetworking.framework"
+  install_framework "Pods-Venatus/BDBOAuth1Manager.framework"
   install_framework "Pods-Venatus/Bolts.framework"
   install_framework "Pods-Venatus/Parse.framework"
 fi
