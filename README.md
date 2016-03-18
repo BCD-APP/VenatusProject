@@ -45,7 +45,8 @@ Sprint #1
 
 ![Gif 1](Venatus1.0.gif "Gif1")
 
-
+**Notable Road Blocks**
+- **D** PFObject refused to be saved and after scouring the internet without help as noone else seemed to have the issue, one vague stackoverflow mentioned something that made me realize the issue was with the server and I had accidently made the schematic of type string instead of file during testing
 
 
 
