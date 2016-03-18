@@ -43,7 +43,7 @@ https://www.fluidui.com/editor/live/preview/p_aGbrBPAIRvbwqcIQrlktvBeqFcgaU06l.1
 
 Sprint #1
 
-![Gif 1](Venatus1.gif "Gif1")
+![Gif 1](Venatus1.0.gif "Gif1")
 
 
 
