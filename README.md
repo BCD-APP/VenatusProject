@@ -39,6 +39,16 @@ https://www.fluidui.com/editor/live/preview/p_aGbrBPAIRvbwqcIQrlktvBeqFcgaU06l.1
 ![UML Diagram](VenatusUML1.png "UML Diagram")
 
 
+###Gifs
+
+Sprint #1
+
+![Gif 1](Venatus1.gif "Gif1")
+
+
+
+
+
 ###Considerations: 
  - **What is your product pitch?** Start with a problem statement and follow up with a solution. Focus on engaging your audience with a relatable need.
   - Our product pitch is to provide a Communication based IOS application that provide a one stop & shop for gamers to satisfy there needs.
