@@ -10,7 +10,7 @@
 - [x] Creating a Venatus Theme.
 - [x] Users can login/logout through VParse
 - [x] Registration Page
-- [x] User can customize profile
+- [ ] User can customize profile
 - [ ] News Feed supplemented with tweets from Twitter API
 - [ ] Users can make posts, with pictures, videos , streams etc.
 - [ ] Settings/Profile View to set users preferences and link various other games
