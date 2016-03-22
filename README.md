@@ -1,4 +1,4 @@
-###Group Project - Venatus###
+######Group Project - Venatus
 
 **Venatus** is a one-stop hub for gamers to socialize in a friendly community about games related to their interests. Our vision is to build a app that can unite gamers that'll come for a multitude of reasons. Whether your competitive or social we'll have vod-support to a tournament system in place so you can show your skills or share some a special moment.Users sets their profile and interests to receive relevant information and communicate with others with similar interests. 
 
