@@ -8,15 +8,12 @@
 
 #####Required User Stories:
 - [x] Creating a Venatus Theme.
-- [x] Users can login to access the rest of the app
+- [x] Users can login/logout through VParse
 - [x] Registration Page
-- [x] User can Logout 
-- [ ] User can set profile information
-- [x] User can set a profile picture
-- [ ] Standard Social Media Features Implemented.  
-- [ ] News Feed supplemented with Twitter API
+- [x] User can customize profile
+- [ ] News Feed supplemented with tweets from Twitter API
 - [ ] Users can make posts, with pictures, videos , streams etc.
-- [ ] Settings/Profile View to set users preferences and link various other sources
+- [ ] Settings/Profile View to set users preferences and link various other games
 - [ ] Chat Client
 - [ ] Gaming Meetups
 
@@ -47,7 +44,7 @@ Sprint #1
 
 **Notable Road Blocks**
 - **D** PFObject refused to be saved and after scouring the internet without help as noone else seemed to have the issue, one vague stackoverflow mentioned something that made me realize the issue was with the server and I had accidently made the schematic of type string instead of file during testing
-
+**D** Trying to implement Login with Steam feature, due to lack of documentation on how implement it. Improving our knowledge of the frameworks/libraries will come in handy for solving this feature, plan to implemnt later on.
 
 
 ###Considerations: 
