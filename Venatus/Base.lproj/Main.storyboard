@@ -113,8 +113,14 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-j5-3lM">
+                                <rect key="frame" x="112" y="220" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-lj-6OE">
-                                <rect key="frame" x="20" y="274" width="116" height="21"/>
+                                <rect key="frame" x="104" y="401" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -124,7 +130,7 @@
                                 <state key="normal" title="Check Availability"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-HJ-2RC">
-                                <rect key="frame" x="130" y="381" width="61" height="30"/>
+                                <rect key="frame" x="130" y="448" width="61" height="30"/>
                                 <state key="normal" title="Register!"/>
                                 <connections>
                                     <action selector="onRegistration:" destination="JBR-Gq-exU" eventType="touchUpInside" id="fUn-X9-SVV"/>
@@ -141,33 +147,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WW5-Cy-mYX">
-                                <rect key="frame" x="131" y="454" width="58" height="30"/>
+                                <rect key="frame" x="131" y="509" width="58" height="30"/>
                                 <state key="normal" title="Go Back"/>
                                 <connections>
                                     <action selector="onBack:" destination="JBR-Gq-exU" eventType="touchUpInside" id="FOv-fN-RlI"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNr-xG-A1f">
-                                <rect key="frame" x="123" y="195" width="177" height="71"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNr-xG-A1f">
+                                <rect key="frame" x="20" y="275" width="280" height="71"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-j5-3lM">
-                                <rect key="frame" x="20" y="220" width="97" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g4A-wK-AWa" firstAttribute="top" secondItem="jtY-4u-Hmi" secondAttribute="top" id="Lcm-tk-QRs"/>
                             <constraint firstItem="bPb-9j-29x" firstAttribute="top" secondItem="g4A-wK-AWa" secondAttribute="bottom" id="SUh-8f-Z8g"/>
                             <constraint firstItem="g4A-wK-AWa" firstAttribute="leading" secondItem="jtY-4u-Hmi" secondAttribute="leading" id="b0H-Ub-nzW"/>
-                            <constraint firstAttribute="trailing" secondItem="rNr-xG-A1f" secondAttribute="trailing" constant="20" id="eEs-Xp-HdR"/>
                             <constraint firstAttribute="trailing" secondItem="g4A-wK-AWa" secondAttribute="trailing" id="hLB-4i-oJT"/>
                         </constraints>
                     </view>
