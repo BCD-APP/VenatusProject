@@ -98,30 +98,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Red &amp; Black Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-wK-AWa">
-                                <rect key="frame" x="0.0" y="-3" width="320" height="571"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red &amp; Black Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-wK-AWa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwG-mc-YdM">
                                 <rect key="frame" x="20" y="57" width="79" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-7d-Jc2">
                                 <rect key="frame" x="20" y="134" width="79" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-j5-3lM">
-                                <rect key="frame" x="20" y="195" width="97" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-lj-6OE">
-                                <rect key="frame" x="20" y="240" width="116" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="274" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -153,13 +147,35 @@
                                     <action selector="onBack:" destination="JBR-Gq-exU" eventType="touchUpInside" id="FOv-fN-RlI"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNr-xG-A1f">
+                                <rect key="frame" x="123" y="195" width="177" height="71"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-j5-3lM">
+                                <rect key="frame" x="20" y="220" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g4A-wK-AWa" firstAttribute="top" secondItem="jtY-4u-Hmi" secondAttribute="top" id="Lcm-tk-QRs"/>
+                            <constraint firstItem="bPb-9j-29x" firstAttribute="top" secondItem="g4A-wK-AWa" secondAttribute="bottom" id="SUh-8f-Z8g"/>
+                            <constraint firstItem="g4A-wK-AWa" firstAttribute="leading" secondItem="jtY-4u-Hmi" secondAttribute="leading" id="b0H-Ub-nzW"/>
+                            <constraint firstAttribute="trailing" secondItem="rNr-xG-A1f" secondAttribute="trailing" constant="20" id="eEs-Xp-HdR"/>
+                            <constraint firstAttribute="trailing" secondItem="g4A-wK-AWa" secondAttribute="trailing" id="hLB-4i-oJT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DWE-MS-D9c"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="backButton" destination="WW5-Cy-mYX" id="pt2-Vj-cNu"/>
+                        <outlet property="dobPicker" destination="rNr-xG-A1f" id="Mnw-au-rlV"/>
                         <outlet property="passwordTextField" destination="23H-q1-s6f" id="8dd-MQ-RNx"/>
                         <outlet property="registerButton" destination="hHb-HJ-2RC" id="cG3-pl-JqX"/>
                         <outlet property="usernameTextField" destination="Rs1-Wm-86F" id="Rwj-au-Vvv"/>
