@@ -7,21 +7,22 @@
 ###User Stories:
 
 #####Required User Stories:
-- [ ] Creating a Venatus Theme.
-- [ ] Users can login to access the rest of the app
-- [ ] Registration Page
-- [ ] User can Logout 
-- [ ] User can Login using Steam.
-- [ ] User Profile
+- [x] Creating a Venatus Theme.
+- [x] Users can login to access the rest of the app
+- [x] Registration Page
+- [x] User can Logout 
+- [ ] User can set profile information
+- [x] User can set a profile picture
 - [ ] Standard Social Media Features Implemented.  
-- [ ] User can add games to his profile from Steam & League of Legends
-- [ ] News Feed supplemented with Twittter API
+- [ ] News Feed supplemented with Twitter API
 - [ ] Users can make posts, with pictures, videos , streams etc.
 - [ ] Settings/Profile View to set users preferences and link various other sources
 - [ ] Chat Client
 - [ ] Gaming Meetups
 
 #####Optionals:
+- [ ] User can Login using Steam.
+- [ ] User can add games to his profile from Steam & League of Legends
 - [ ] Incorporating PayPal to allow users to buy company cryptocurrency (ie, Ingame Currencies)
 - [ ] Tournament Registration/Brackets
 - [ ] Add more games to the add game function
@@ -36,6 +37,17 @@ https://www.fluidui.com/editor/live/preview/p_aGbrBPAIRvbwqcIQrlktvBeqFcgaU06l.1
 
 ###Data Schema
 ![UML Diagram](VenatusUML1.png "UML Diagram")
+
+
+###Gifs
+
+Sprint #1
+
+![Gif 1](Venatus1.0.gif "Gif1")
+
+**Notable Road Blocks**
+- **D** PFObject refused to be saved and after scouring the internet without help as noone else seemed to have the issue, one vague stackoverflow mentioned something that made me realize the issue was with the server and I had accidently made the schematic of type string instead of file during testing
+
 
 
 ###Considerations: 
