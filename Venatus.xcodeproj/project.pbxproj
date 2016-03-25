@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		401C9644E0312C7973CA7061 /* Pods_Venatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B286B455C632B8369228D17C /* Pods_Venatus.framework */; };
+		916AEE9E1CA4D4FE00884225 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEE9D1CA4D4FE00884225 /* MapViewController.swift */; };
+		916AEEA01CA4D74900884225 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEE9F1CA4D74900884225 /* EventViewController.swift */; };
 		916E83571C8FE7F100B33DB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83561C8FE7F100B33DB7 /* LoginViewController.swift */; };
 		916E83591C8FE7FC00B33DB7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83581C8FE7FC00B33DB7 /* MainViewController.swift */; };
 		916E835B1C8FE81200B33DB7 /* ViewingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		470DE717945F63A3BFE16E79 /* Pods-Venatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Venatus/Pods-Venatus.debug.xcconfig"; sourceTree = "<group>"; };
+		916AEE9D1CA4D4FE00884225 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		916AEE9F1CA4D74900884225 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		916E83561C8FE7F100B33DB7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		916E83581C8FE7FC00B33DB7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewingProfileViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */,
 				916E835C1C8FE83500B33DB7 /* ProfileViewController.swift */,
 				91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */,
+				916AEE9D1CA4D4FE00884225 /* MapViewController.swift */,
+				916AEE9F1CA4D74900884225 /* EventViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				916E83631C8FEBDC00B33DB7 /* Profile.swift in Sources */,
 				916E835B1C8FE81200B33DB7 /* ViewingProfileViewController.swift in Sources */,
 				91E8A9171C9B929100564DA2 /* TwitterClient.swift in Sources */,
+				916AEEA01CA4D74900884225 /* EventViewController.swift in Sources */,
 				91B0CBE51C99A4160068F948 /* RegistrationViewController.swift in Sources */,
 				916E835F1C8FEA5300B33DB7 /* Format.swift in Sources */,
 				917C32BF1C9103A800D4027D /* NewsParser.swift in Sources */,
@@ -293,6 +300,7 @@
 				916E83591C8FE7FC00B33DB7 /* MainViewController.swift in Sources */,
 				917C32BB1C90EB1B00D4027D /* Post.swift in Sources */,
 				91E8A91B1C9B932E00564DA2 /* Tweet.swift in Sources */,
+				916AEE9E1CA4D4FE00884225 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

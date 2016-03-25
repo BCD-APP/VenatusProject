@@ -13,13 +13,14 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
 
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
     @IBOutlet var registerButton: UIButton!
-    
-    
     @IBOutlet var backButton: UIButton!
-    
     @IBOutlet var dobPicker: UIPickerView!
+    
+    
+    @IBOutlet var dobLabel: UILabel!
+    
+    
     
     
     let monthArray = ["Month", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -35,6 +36,15 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
     var leap = false
     
     var feb = false
+    
+    var defaultString = "Please Select Your Birthdate"
+    var mutatingString: (Int, Int, Int) = (0, 0, 0)
+    var labelString = "No birthdate set."
+    
+    //var dobSet = false
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +67,9 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
         print(passwordTextField.text)
         print(newUser)
         //newUser["avatar"] = Post.getPFFileFromImage(avatarImage.image!)
+        //if(dobSet){
+            newUser.setObject(labelString, forKey: "birthdate")
+        //}
         newUser.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?)-> Void in
             print(newUser)
 
@@ -151,7 +164,6 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
                 dayCheck = 0
                 feb = false
             case 2:
-                print("LEAP CHECK \(leap)")
                 if(leap){
                     dayCheck = 2
                 }else{
@@ -192,7 +204,9 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
             default:
                 break
             }
-            
+            changeDobLabel(0, row: row)
+        case 1:
+            changeDobLabel(1, row: row)
         case 2:
             if(feb){
                 var year = 9 + row //9 is to match the array hard coding
@@ -207,6 +221,7 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
                     dayCheck = 3
                 }//end if year
             }//end if feb
+            changeDobLabel(2, row: row)
         default:
             break
         }
@@ -237,6 +252,29 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
             break
         }
         return NSAttributedString(string: string, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+    }
+    
+    func changeDobLabel(type: Int, row: Int){
+        print("Start change: \(mutatingString)")
+        //var sum = 0
+        switch(type){
+        case 0:
+            mutatingString.0 = row
+        case 1:
+            mutatingString.1 = row
+        case 2:
+            mutatingString.2 = row
+        default:
+            break
+        }
+        //sum = mutatingString.0 + mutatingString.1 + mutatingString.2
+        print("End change: \(mutatingString)")
+        if(mutatingString.0 != 0 && mutatingString.1 != 0 && mutatingString.2 != 0){
+            labelString = String("\(monthArray[mutatingString.0]) \(dayArray1[mutatingString.1]), \(yearArray[mutatingString.2])")
+            dobLabel.text = labelString
+        }else{
+            dobLabel.text = defaultString
+        }
     }
     
 }

@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var imageOrig: UIImage?
 
     
+    @IBOutlet var birthdayLabel: UILabel!
     
     let user = PFUser.currentUser()
     
@@ -47,6 +48,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
             }
         }
+        if let dob = user?.valueForKey("birthdate") as? String{
+            if(dob != ""){
+                birthdayLabel.text =  dob
+            }
+        }
+        
+        
         
     }
 

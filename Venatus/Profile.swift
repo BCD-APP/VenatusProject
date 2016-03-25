@@ -19,8 +19,8 @@ struct Profile{
     
     
     
-    func addGameToProfile(gameToAdd: Game){
-    
+    mutating func addGameToProfile(gameToAdd: Game){
+        self.games?.append(gameToAdd)
     }
     
 }
