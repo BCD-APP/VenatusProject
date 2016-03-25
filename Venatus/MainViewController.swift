@@ -10,6 +10,13 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet var createEventButton: UIButton!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
