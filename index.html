@@ -1,44 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Venatus by VenatusProject</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/VenatusProject/VenatusProject">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/VenatusProject/VenatusProject/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/VenatusProject/VenatusProject/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <section class="page-header">
+      <h1 class="project-name">Venatus</h1>
+      <h2 class="project-tagline">A  @Briames &amp; @ZhiDev Collaboration</h2>
+      <a href="https://github.com/VenatusProject/VenatusProject" class="btn">View on GitHub</a>
+      <a href="https://github.com/VenatusProject/VenatusProject/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/VenatusProject/VenatusProject/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Venatus</h1>
-          <p>A  @Briames &amp; @ZhiDev Collaboration</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/VenatusProject">VenatusProject</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="group-project---venatus" class="anchor" href="#group-project---venatus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group Project - Venatus</h1>
 
 <p><strong>Venatus</strong> is a one-stop hub for gamers to socialize in a friendly community about games related to their interests. Our vision is to build a app that can unite gamers that'll come for a multitude of reasons. Whether your competitive or social we'll have vod-support to a tournament system in place so you can show your skills or share some a special moment.Users sets their profile and interests to receive relevant information and communicate with others with similar interests. </p>
@@ -86,20 +67,25 @@
 <h3>
 <a id="data-schema" class="anchor" href="#data-schema" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Schema</h3>
 
-<p><img src="https://raw.githubusercontent.com/VenatusProject/VenatusProject/master/VenatusUML1.png" alt="UML Diagram"></p>
+<p><img src="VenatusUML1.png" alt="UML Diagram" title="UML Diagram"></p>
 
 <h3>
-<a id="walkthrough" class="anchor" href="#walkthrough" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Walkthrough</h3>
+<a id="gifs" class="anchor" href="#gifs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gifs</h3>
 
-<p><img src="https://camo.githubusercontent.com/19c1d6ce6c91b656640e2a13f1b19247486fb108/687474703a2f2f692e696d6775722e636f6d2f30576f675042562e676966" alt="Venatus Gif"></p>
+<p>Sprint #1</p>
+
+<p><img src="Venatus1.0.gif" alt="Gif 1" title="Gif1"></p>
+
+<p>Sprint #2(?)</p>
+
+<p><img src="http://i.imgur.com/0WogPBV.gif" title="Video Walkthrough" width="" alt="Video Walkthrough"></p>
 
 <p><strong>Notable Road Blocks</strong></p>
 
 <ul>
 <li>
-<strong>D</strong> PFObject refused to be saved and after scouring the internet without help as noone else seemed to have the issue, one vague stackoverflow mentioned something that made me realize the issue was with the server and I had accidently made the schematic of type string instead of file during testing<br>
-<strong>D</strong> Trying to implement Login with Steam feature, due to lack of documentation on how implement it. Improving our  knowledge of the frameworks/libraries will come in handy for solving this feature, plan to implemnt later on.<br>
-</li>
+<strong>D</strong> PFObject refused to be saved and after scouring the internet without help as noone else seemed to have the issue, one vague stackoverflow mentioned something that made me realize the issue was with the server and I had accidently made the schematic of type string instead of file during testing
+<strong>D</strong> Trying to implement Login with Steam feature, due to lack of documentation on how implement it. Improving our knowledge of the frameworks/libraries will come in handy for solving this feature, plan to implemnt later on.</li>
 </ul>
 
 <h3>
@@ -110,69 +96,57 @@
 <strong>What is your product pitch?</strong> Start with a problem statement and follow up with a solution. Focus on engaging your audience with a relatable need.
 
 <ul>
-<li>Our product pitch is to provide a Communication based IOS application that provide a one stop &amp; shop for gamers to satisfy there needs.<br>
-</li>
-<li>One of the probelms we will be facing will be acquiring a user base which we hope to tackle by consultation with Gaming Companies &amp; using word of mouth sales tactics.<br>
-</li>
-<li>One of the major needs of the Gaming Community is a place that they can come together and show there games without  toxicity. Whether needing a way to escape from real life or toxicity bread from rivalries between games.<br>
-</li>
+<li>Our product pitch is to provide a Communication based IOS application that provide a one stop &amp; shop for gamers to satisfy there needs.</li>
+<li>One of the probelms we will be facing will be acquiring a user base which we hope to tackle by consultation with Gaming Companies &amp; using word of mouth sales tactics.</li>
+<li>One of the major needs of the Gaming Community is a place that they can come together and show there games without toxicity. Whether needing a way to escape from real life or toxicity bread from rivalries between games.</li>
 </ul>
 </li>
 </ul>
 
 <ul>
 <li>
-<p><strong>Who are the key stakeholders for this app?</strong> Who will be using this? What will they be using this for?  </p>
+<p><strong>Who are the key stakeholders for this app?</strong> Who will be using this? What will they be using this for?</p>
 
 <ul>
-<li>The major stakeholders in the business to be projected are: Developers, Accounting, Servers, Customer Service &amp; Advertising.<br>
-</li>
-<li>Our targeted demographic will be Gamers &amp; people that are interested in potentially gaming.<br>
-</li>
-<li>They will be using the app for the social media aspects &amp; amenities such as tournament brackets/registration &amp; Locations.<br>
-</li>
+<li>The major stakeholders in the business to be projected are: Developers, Accounting, Servers, Customer Service &amp; Advertising.</li>
+<li>Our targeted demographic will be Gamers &amp; people that are interested in potentially gaming.</li>
+<li>They will be using the app for the social media aspects &amp; amenities such as tournament brackets/registration &amp; Locations.</li>
 </ul>
 </li>
 <li>
-<p><strong>What are the key functions?</strong> What screens will each user see?  </p>
+<p><strong>What are the key functions?</strong> What screens will each user see?</p>
 
 <ul>
-<li>The key functions of the app are to give gamers a way to show off there gamer life.<br>
-</li>
-<li>Screens will include: a news feed, profile page, meetup page &amp; tournament registration.<br>
-</li>
+<li>The key functions of the app are to give gamers a way to show off there gamer ilfe.</li>
+<li>Screens will include: a news feed, profile page, meetup page &amp; tournament registration.</li>
 </ul>
 </li>
 <li>
-<p><strong>What will your final demo look like?</strong> Describe the flow of your final demo  </p>
+<p><strong>What will your final demo look like?</strong> Describe the flow of your final demo</p>
 
 <ul>
-<li>Our Final Demo app will look like a mixture of facebook/twitter &amp; google maps.<br>
-</li>
-<li>Our demo will go into: our vision, core feature,  business plans &amp; explanations how our app will benefit our dear gaming society.<br>
-</li>
+<li>Our Final Demo app will look like a mixture of facebook/twitter &amp; google maps.</li>
+<li>Our demo will go into: our vision, core feature,  business plans &amp; explanations how our app will benefit our dear gaming society.</li>
 </ul>
 </li>
 <li>
-<p><strong>What mobile features do you leverage?</strong> Leverage at least two mobile-oriented features (i.e. maps and camera)  </p>
+<p><strong>What mobile features do you leverage?</strong> Leverage at least two mobile-oriented features (i.e. maps and camera)</p>
 
 <ul>
-<li>I'm really hoping to leverage the  near 100% uptime of connectability modern smartphones. Plan on using the Location &amp; Camera services those are pretty cool.<br>
-</li>
+<li>I'm really hoping to leverage the  near 100% uptime of connectability modern smartphones. Plan on using the Location &amp; Camera services those are pretty cool.</li>
 </ul>
 </li>
-<li>
-<p><strong>What are your technical concerns?</strong> What technical features do you need help or resources for?  </p>
+<li><p><strong>What are your technical concerns?</strong> What technical features do you need help or resources for?</p></li>
+</ul>
 
-<ul>
-<li>We plan on using Mapkit, Shopkit &amp; other frameworks. We will have a sharp learning curve however we should be able to implement these features.</li>
-</ul>
-</li>
-</ul>
-      </section>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/VenatusProject/VenatusProject">Venatus</a> is maintained by <a href="https://github.com/VenatusProject">VenatusProject</a>.</span>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
