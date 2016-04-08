@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		401C9644E0312C7973CA7061 /* Pods_Venatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B286B455C632B8369228D17C /* Pods_Venatus.framework */; };
+		916AEE9E1CA4D4FE00884225 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEE9D1CA4D4FE00884225 /* MapViewController.swift */; };
+		916AEEA01CA4D74900884225 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEE9F1CA4D74900884225 /* EventViewController.swift */; };
 		916E83571C8FE7F100B33DB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83561C8FE7F100B33DB7 /* LoginViewController.swift */; };
 		916E83591C8FE7FC00B33DB7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83581C8FE7FC00B33DB7 /* MainViewController.swift */; };
 		916E835B1C8FE81200B33DB7 /* ViewingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */; };
@@ -22,15 +24,21 @@
 		9182974D1C8FCFA700AC4266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9182974B1C8FCFA700AC4266 /* Main.storyboard */; };
 		9182974F1C8FCFA700AC4266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9182974E1C8FCFA700AC4266 /* Assets.xcassets */; };
 		918297521C8FCFA700AC4266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918297501C8FCFA700AC4266 /* LaunchScreen.storyboard */; };
+		91924B591CB4A152006B3FDA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91924B581CB4A152006B3FDA /* SWRevealViewController.m */; };
+		91924B5B1CB4A295006B3FDA /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91924B5A1CB4A295006B3FDA /* SideViewController.swift */; };
+		91924B5D1CB4A5B7006B3FDA /* GameLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91924B5C1CB4A5B7006B3FDA /* GameLibrary.swift */; };
 		91A7315C1C983C5E009D4E44 /* SteamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7315B1C983C5E009D4E44 /* SteamClient.swift */; };
 		91B0CBE51C99A4160068F948 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */; };
 		91E8A9171C9B929100564DA2 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8A9161C9B929100564DA2 /* TwitterClient.swift */; };
 		91E8A9191C9B930E00564DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8A9181C9B930E00564DA2 /* User.swift */; };
-		91E8A91B1C9B932E00564DA2 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8A91A1C9B932E00564DA2 /* Tweet.swift */; };
+		91FAFD711CB73CF4004212FF /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAFD701CB73CF4004212FF /* Tweets.swift */; };
+		91FAFD761CB74B0A004212FF /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAFD751CB74B0A004212FF /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		470DE717945F63A3BFE16E79 /* Pods-Venatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Venatus/Pods-Venatus.debug.xcconfig"; sourceTree = "<group>"; };
+		916AEE9D1CA4D4FE00884225 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		916AEE9F1CA4D74900884225 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		916E83561C8FE7F100B33DB7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		916E83581C8FE7FC00B33DB7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewingProfileViewController.swift; sourceTree = "<group>"; };
@@ -47,11 +55,17 @@
 		9182974E1C8FCFA700AC4266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918297511C8FCFA700AC4266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		918297531C8FCFA700AC4266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91924B561CB4A152006B3FDA /* Venatus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Venatus-Bridging-Header.h"; sourceTree = "<group>"; };
+		91924B571CB4A152006B3FDA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		91924B581CB4A152006B3FDA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		91924B5A1CB4A295006B3FDA /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		91924B5C1CB4A5B7006B3FDA /* GameLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLibrary.swift; sourceTree = "<group>"; };
 		91A7315B1C983C5E009D4E44 /* SteamClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteamClient.swift; sourceTree = "<group>"; };
 		91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		91E8A9161C9B929100564DA2 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		91E8A9181C9B930E00564DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		91E8A91A1C9B932E00564DA2 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		91FAFD701CB73CF4004212FF /* Tweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
+		91FAFD751CB74B0A004212FF /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		9B48B66F24CEBD409AE8D1A9 /* Pods-Venatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Venatus/Pods-Venatus.release.xcconfig"; sourceTree = "<group>"; };
 		B286B455C632B8369228D17C /* Pods_Venatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Venatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +99,9 @@
 				916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */,
 				916E835C1C8FE83500B33DB7 /* ProfileViewController.swift */,
 				91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */,
+				916AEE9D1CA4D4FE00884225 /* MapViewController.swift */,
+				916AEE9F1CA4D74900884225 /* EventViewController.swift */,
+				91924B5A1CB4A295006B3FDA /* SideViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -99,6 +116,8 @@
 				917C32BC1C90FDAF00D4027D /* Game.swift */,
 				917C32BE1C9103A800D4027D /* NewsParser.swift */,
 				91A7315B1C983C5E009D4E44 /* SteamClient.swift */,
+				91924B5C1CB4A5B7006B3FDA /* GameLibrary.swift */,
+				91FAFD751CB74B0A004212FF /* NewsCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -124,6 +143,8 @@
 		918297461C8FCFA700AC4266 /* Venatus */ = {
 			isa = PBXGroup;
 			children = (
+				91FAFD721CB73D08004212FF /* TwitterModels */,
+				91924B551CB4A144006B3FDA /* SWRevealController */,
 				91E8A9151C9B927B00564DA2 /* API */,
 				916E83551C8FE78F00B33DB7 /* Models */,
 				916E83531C8FE77700B33DB7 /* Views */,
@@ -136,14 +157,31 @@
 			path = Venatus;
 			sourceTree = "<group>";
 		};
+		91924B551CB4A144006B3FDA /* SWRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				91924B571CB4A152006B3FDA /* SWRevealViewController.h */,
+				91924B581CB4A152006B3FDA /* SWRevealViewController.m */,
+				91924B561CB4A152006B3FDA /* Venatus-Bridging-Header.h */,
+			);
+			name = SWRevealController;
+			sourceTree = "<group>";
+		};
 		91E8A9151C9B927B00564DA2 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				91E8A9161C9B929100564DA2 /* TwitterClient.swift */,
-				91E8A9181C9B930E00564DA2 /* User.swift */,
-				91E8A91A1C9B932E00564DA2 /* Tweet.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		91FAFD721CB73D08004212FF /* TwitterModels */ = {
+			isa = PBXGroup;
+			children = (
+				91E8A9181C9B930E00564DA2 /* User.swift */,
+				91FAFD701CB73CF4004212FF /* Tweets.swift */,
+			);
+			name = TwitterModels;
 			sourceTree = "<group>";
 		};
 		E825AE1C8D48C759E61B0927 /* Frameworks */ = {
@@ -278,21 +316,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				916E83571C8FE7F100B33DB7 /* LoginViewController.swift in Sources */,
+				91924B591CB4A152006B3FDA /* SWRevealViewController.m in Sources */,
 				917C32BD1C90FDAF00D4027D /* Game.swift in Sources */,
 				916E83631C8FEBDC00B33DB7 /* Profile.swift in Sources */,
 				916E835B1C8FE81200B33DB7 /* ViewingProfileViewController.swift in Sources */,
 				91E8A9171C9B929100564DA2 /* TwitterClient.swift in Sources */,
+				916AEEA01CA4D74900884225 /* EventViewController.swift in Sources */,
 				91B0CBE51C99A4160068F948 /* RegistrationViewController.swift in Sources */,
+				91924B5D1CB4A5B7006B3FDA /* GameLibrary.swift in Sources */,
 				916E835F1C8FEA5300B33DB7 /* Format.swift in Sources */,
+				91FAFD761CB74B0A004212FF /* NewsCell.swift in Sources */,
 				917C32BF1C9103A800D4027D /* NewsParser.swift in Sources */,
+				91FAFD711CB73CF4004212FF /* Tweets.swift in Sources */,
 				91E8A9191C9B930E00564DA2 /* User.swift in Sources */,
 				916E835D1C8FE83500B33DB7 /* ProfileViewController.swift in Sources */,
 				916E83611C8FEA9A00B33DB7 /* News.swift in Sources */,
 				918297481C8FCFA700AC4266 /* AppDelegate.swift in Sources */,
 				91A7315C1C983C5E009D4E44 /* SteamClient.swift in Sources */,
+				91924B5B1CB4A295006B3FDA /* SideViewController.swift in Sources */,
 				916E83591C8FE7FC00B33DB7 /* MainViewController.swift in Sources */,
 				917C32BB1C90EB1B00D4027D /* Post.swift in Sources */,
-				91E8A91B1C9B932E00564DA2 /* Tweet.swift in Sources */,
+				916AEE9E1CA4D4FE00884225 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +450,13 @@
 			baseConfigurationReference = 470DE717945F63A3BFE16E79 /* Pods-Venatus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Venatus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zhi.Venatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Venatus/Venatus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -418,10 +465,12 @@
 			baseConfigurationReference = 9B48B66F24CEBD409AE8D1A9 /* Pods-Venatus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Venatus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zhi.Venatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Venatus/Venatus-Bridging-Header.h";
 			};
 			name = Release;
 		};

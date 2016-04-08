@@ -24,7 +24,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var steamButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +35,8 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func onSteamLogin(sender: UIButton) {
-        let steamClient = BDBOAuth1SessionManager(baseURL: NSURL(string: "https://http://api.steampowered.com"))
+        //let steamClient = BDBOAuth1SessionManager(baseURL: NSURL(string: "https://http://api.steampowered.com"))
+        print("Currently Inactive")
     
     }
     
@@ -52,8 +52,19 @@ class LoginViewController: UIViewController {
                 print("User login failed.")
                 print(error.localizedDescription)
             } else {
+                let alert = UIAlertController(title: "Notice", message: "We would like to access your twitter account to fill your news feed with relevant data from twitter. Not signing in and authorizing Twitter only prevents news from loading in for the current session.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok let me sign in!", style: .Default) { _ in
+                    TwitterClient.sharedInstance.login({ () -> () in
+                        self.performSegueWithIdentifier("LoggedInSegue", sender: self)
+                    }, failure: { (error:NSError) -> () in
+                            print(error.localizedDescription)
+                    })
+                })//end alert Action1
+                alert.addAction(UIAlertAction(title: "No Thanks!", style: .Default) { _ in
+                    self.performSegueWithIdentifier("LoggedInSegue", sender: self)
+                })//Perform loggedInSegue in both scenerios
+                self.presentViewController(alert, animated: true){}
                 print("User logged in successfully")
-                self.performSegueWithIdentifier("LoggedInSegue", sender: self)
                 // display view controller that needs to shown after successful login
             }
         }
@@ -65,6 +76,14 @@ class LoginViewController: UIViewController {
     }
 
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Start segue")
+        if(segue.identifier == "LoggedInSegue"){
+            //Do things if we're segueing using LoggedInSegue
+            
+        }//end if segue logged in segue
+        print("nearing end segue")
+    }
     
     
 }
