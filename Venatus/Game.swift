@@ -18,7 +18,14 @@ class Game: NSObject {
     
     var authenticationInfo: AnyObject? // ???
     
+    var tags: String?
+    
     override init(){
         super.init()
     }
+    
+    init(NameOfGame: String){
+        gameName = NameOfGame
+    }
+    
 }

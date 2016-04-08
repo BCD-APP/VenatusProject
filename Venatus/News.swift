@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct News {
+class News {
     var name: String?
     var date: NSDate?
     var text: String?

@@ -19,6 +19,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var avatarImage: UIImageView!
     
     
+    @IBOutlet var gameTextfield: UITextField! //Refactor into drop down menu of options
+    @IBOutlet var addGameButton: UIButton! //Maybe refactor probably not
+    
     
     var vc: UIImagePickerController?
     var imageOrig: UIImage?
@@ -33,6 +36,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.revealViewController() != nil {
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
+        
+        
         vc = UIImagePickerController()
         vc!.delegate = self
         vc!.allowsEditing = true
@@ -133,6 +143,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func addGameClicked(sender: UIButton) {
+        let nameOfGame = gameTextfield.text
+        if let nameOfGame = nameOfGame{
+            print("Creating game to add")
+            let gameToAdd = Game(NameOfGame: nameOfGame)
+            print("Adding game")
+            Profile.Ven_UserProfile.addGameToProfile(gameToAdd)
+        }else{
+            print("Field is nil nothing added")
+        }
+    }
     
 
     

@@ -8,7 +8,10 @@
 
 import UIKit
 
-struct Profile{
+class Profile{
+    
+    static let Ven_UserProfile = Profile() //Definitely refactor this and everything related to this singleton. As it stands theres no clearing data on logout and resetting program state
+    
     var name: String?
     var dateOfBirth: NSDate?
     var username: String?
@@ -19,8 +22,29 @@ struct Profile{
     
     
     
-    mutating func addGameToProfile(gameToAdd: Game){
+    func addGameToProfile(gameToAdd: Game){
+        if self.games == nil{
+            self.games = [Game]() //create an empty array to add to
+        }
+        print("Adding game: \(gameToAdd) named \(gameToAdd.gameName)")
         self.games?.append(gameToAdd)
+    }
+    
+    func resetGames(){
+        self.games = nil
+    }
+    
+    func grabTags()->[String]{
+        var returnArray = [String]()
+        if let games = games{
+            for gameObj in games{
+                if let inputString = gameObj.gameName{
+                    returnArray.append(inputString)
+                    print("Debug grab tag in Profile: \(returnArray)")
+                }
+            }
+        }
+        return returnArray
     }
     
 }
