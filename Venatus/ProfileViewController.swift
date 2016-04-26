@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIPopoverPresentationControllerDelegate, GamePopViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
 
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var photoLibraryButton: UIButton!
@@ -21,17 +21,22 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet var gameTextfield: UITextField! //Refactor into drop down menu of options
     @IBOutlet var addGameButton: UIButton! //Maybe refactor probably not
+    @IBOutlet var addAGame: UIButton!
+    
+    
     
     
     var vc: UIImagePickerController?
     var imageOrig: UIImage?
+    @IBOutlet var collectionView: UICollectionView!
 
     
     @IBOutlet var birthdayLabel: UILabel!
     
     let user = PFUser.currentUser()
     
-    
+    var imageList: [String] = []
+
     
     
     override func viewDidLoad() {
@@ -42,6 +47,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         }
         
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        createCollection()
         
         vc = UIImagePickerController()
         vc!.delegate = self
@@ -155,7 +163,54 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
+    @IBAction func clickedAdd(sender: UIButton) {
+        performSegueWithIdentifier("PopSegue", sender: self)
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Preparing Segue")
+        if segue.identifier == "PopSegue"{
+            print("POPPED")
+            let popoverViewController = segue.destinationViewController as! GamePopViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+            popoverViewController.delegate = self
+            
+        }
+    }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    /* DELEGATED METHOD */
+    func selectedItem(name: String?) {
+        print("Delegated Method")
+        print(name)
+        if let name = name{
+            imageList.append(name)
+            collectionView.reloadData()
+            print("reloading data")
+        }
+    }
     
-
+    /* Collection View */
+    func createCollection(){
+        //Other relevent stuff here for redrawing collection view
+        collectionView.reloadData()
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GameCell", forIndexPath: indexPath) as! GameCell
+        let imageName = imageList[indexPath.row]
+        cell.gameImageName = imageName
+        print("Putting gameImage string in: \(imageName)")
+        
+        print("Returning cell")
+        return cell
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("imagelist found: ")
+        print(imageList.count)
+        return imageList.count
+        
+    }
 }

@@ -20,7 +20,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, EventViewControlle
     
     var lat: Double?
     var lon: Double?
-    
+    var annoImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -37,12 +37,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, EventViewControlle
     
     /* Adds annotation(pin) onto the map */
 
-    func addPin(lat: Double, lon: Double) {
+    func addPin(lat: Double, lon: Double, title: String?){
         let annotation = MKPointAnnotation()
         let locationCoordinate = CLLocationCoordinate2DMake(lat, lon)
         annotation.coordinate = locationCoordinate
         mapView.addAnnotation(annotation)
-        mapView.gestureRecognizers?.removeAll()
+        if let title = title{
+            annotation.title = title
+        }
+        mapView.gestureRecognizers?.removeLast()
     }
 
     /* Create button pressed, allow user to create pin on map and segue into other VC */
@@ -64,16 +67,51 @@ class MapViewController: UIViewController, MKMapViewDelegate, EventViewControlle
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as! EventViewController
-        vc.lat = self.lat
-        vc.lon = self.lon
-        vc.delegate = self
+        if segue.identifier == "eventSegue"{
+            let vc = segue.destinationViewController as! EventViewController
+            vc.lat = self.lat
+            vc.lon = self.lon
+            vc.delegate = self
+        }
     }
 
     /* Delegated method*/
-    func locationPicked(controller: EventViewController, latitude: Double, longitude: Double) {
+    func locationPicked(controller: EventViewController, latitude: Double, longitude: Double, title: String?, image: UIImage?) {
         navigationController?.popToViewController(self, animated: true)
-        addPin(latitude, lon: longitude)
+        if let image = image{
+            annoImage = image
+        }
+        addPin(latitude, lon: longitude, title: title)
     }
 
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseID = "myAnnotationView"
+        print("beep")
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+        if (annotationView == nil) {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            annotationView!.canShowCallout = true
+            annotationView!.leftCalloutAccessoryView = UIImageView(frame: CGRect(x:0, y:0, width: 50, height:50))
+        }
+        
+        let imageView = annotationView?.leftCalloutAccessoryView as! UIImageView
+        if let annoImage = annoImage{
+            imageView.image = annoImage
+        }
+        
+        let button = UIButton(type: .Custom)
+        //let button = annotationView?.rightCalloutAccessoryView as! UIButton
+        
+        button.frame = CGRectMake(0,0,50,50)
+        button.addTarget(self, action: "clickedCallOut:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        button.setImage(UIImage(named: "Venatus Logo"), forState: .Normal)
+        annotationView?.rightCalloutAccessoryView = button
+        return annotationView
+    }
+    
+    func clickedCallOut(sender: UIButton){
+        print("CallOutClicked")
+        performSegueWithIdentifier("viewSegue", sender: self)
+    }
 }
