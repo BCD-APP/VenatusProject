@@ -189,6 +189,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             imageList.append(name)
             collectionView.reloadData()
             print("reloading data")
+
+                print("Creating game to add")
+                let gameToAdd = Game(NameOfGame: name)
+                print("Adding game")
+                Profile.Ven_UserProfile.addGameToProfile(gameToAdd)
         }
     }
     

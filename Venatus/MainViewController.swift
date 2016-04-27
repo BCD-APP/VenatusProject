@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
+class MainViewController: UIViewController, /*UITableViewDataSource, UITableViewDelegate, */UIPopoverPresentationControllerDelegate {
 
     let client = TwitterClient.sharedInstance
     let eventInstance = Events.zhi_instance
@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet var newsScroll: UIScrollView!
     @IBOutlet var eventsScroll: UIScrollView!
+    @IBOutlet var streamScroll: UIScrollView!
     
     
     
@@ -30,9 +31,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
+        /*tableView.delegate = self
         tableView.dataSource = self
-        
+        */
         if self.revealViewController() != nil {
 
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -44,6 +45,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         */
         scrollViewPopulateNews()
         scrollViewPopulateEvents()
+        scrollViewPopulateStreams()
     }
     
     func scrollViewPopulateNews(){
@@ -82,7 +84,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func scrollViewPopulateEvents(){
         let contentWidth = CGFloat(450)
         var contentHeight = CGFloat(200)
-        var scroll2count = eventInstance.z_Events.count
+        /* var for non demo */let scroll2count = eventInstance.z_Events.count
         var threecount = 0
         var allocated = 0
         if scroll2count > 3{
@@ -108,6 +110,38 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
+    
+    
+    func scrollViewPopulateStreams(){
+        let contentWidth = CGFloat(450)
+        var contentHeight = CGFloat(200)
+        let scroll3count = 0 /* Stream stuff *///eventInstance.z_Events.count
+        var threecount = 0
+        var allocated = 0
+        if scroll3count > 3{
+            contentHeight = CGFloat(165) * (CGFloat(scroll3count+1)/3) + CGFloat(10)//scrollView.bounds.height * 3 // change this based on # of items. CGFloat 150(tile) x ( # / 3) if # < 3 set # to 3.
+        }
+        newsScroll.contentSize = CGSizeMake(contentWidth, contentHeight)
+        var currentXOffset = CGFloat(0)
+        var currentYOffset = CGFloat(0)
+        let subviewEdge = CGFloat(150)
+        print("SCROLL3 COUNT ATM : ")
+        print(scroll3count)
+        while (scroll3count > allocated) {
+            print("INSIDE SCROLL COUNT WHILE LOOP")
+            let frame = CGRectMake(currentXOffset, currentYOffset, 150, 150).insetBy(dx: 5, dy: 5)
+            createTile(frame, title: "Streams", content: "STREAM INFORMATION")
+            allocated++
+            threecount = (threecount + 1) % 3
+            if(threecount == 0){
+                currentXOffset = CGFloat(0)
+                currentYOffset += subviewEdge
+            }else{
+                currentXOffset += subviewEdge
+            }
+        }
+    }
+    
     
     func createTile(frame: CGRect, title: String, content: String){
         let tile = Tiles(frame: frame)
@@ -165,15 +199,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tempArray = searchResults
             print("Search results : ")
             print(searchResults)
-            self.tableView.reloadData()
+            //self.tableView.reloadData()
             self.scrollViewPopulateNews()
 
         }, failure: { (error:NSError) -> () in
                 print(error.localizedDescription)
         })
         scrollViewPopulateEvents()
+        scrollViewPopulateStreams()
     }
-    
+    /*
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as! NewsCell
         cell.newsLabel.text = String(tempArray![indexPath.row].text!)
@@ -186,7 +221,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }else{
             return 0
         }
-    }
+    }*/
 
     
 

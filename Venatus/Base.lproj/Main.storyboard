@@ -724,37 +724,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTq-yb-kmJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="56" id="bnD-zC-T6Z" customClass="NewsCell" customModule="Venatus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="56"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnD-zC-T6Z" id="Nub-8V-g9X">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-qS-cQc">
-                                                    <rect key="frame" x="5" y="5" width="310" height="45"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="dPd-qS-cQc" firstAttribute="top" secondItem="Nub-8V-g9X" secondAttribute="top" constant="5" id="3IT-w0-eZJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="dPd-qS-cQc" secondAttribute="bottom" constant="5" id="Jhn-ao-FZT"/>
-                                                <constraint firstAttribute="trailing" secondItem="dPd-qS-cQc" secondAttribute="trailing" constant="5" id="WgB-Ed-2Hy"/>
-                                                <constraint firstItem="dPd-qS-cQc" firstAttribute="leading" secondItem="Nub-8V-g9X" secondAttribute="leading" constant="5" id="lYf-SD-igf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="newsLabel" destination="dPd-qS-cQc" id="WQe-x4-usH"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeB-Wi-api">
                                 <rect key="frame" x="116" y="518" width="88" height="30"/>
                                 <state key="normal" title="Create Event"/>
@@ -769,28 +738,38 @@
                                     <action selector="buttonPressed:" destination="k4N-PL-vwC" eventType="touchUpInside" id="MPA-Zg-mGy"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7C-5w-WnW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-de-nFC">
-                                <rect key="frame" x="139" y="235" width="42" height="21"/>
+                                <rect key="frame" x="139" y="65" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7C-5w-WnW">
-                                <rect key="frame" x="0.0" y="232" width="320" height="128"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWJ-cb-wXo">
+                                <rect key="frame" x="0.0" y="190" width="320" height="128"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywW-71-CfM">
-                                <rect key="frame" x="131" y="365" width="59" height="21"/>
+                                <rect key="frame" x="131" y="195" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWJ-cb-wXo">
-                                <rect key="frame" x="0.0" y="358" width="320" height="128"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXA-Dz-zny">
+                                <rect key="frame" x="0.0" y="315" width="320" height="151"/>
+                                <color key="backgroundColor" red="0.57729617170000003" green="1" blue="0.125578264" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Streams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spa-Og-DOo">
+                                <rect key="frame" x="132" y="320" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="j0s-6x-M7b"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -799,7 +778,7 @@
                         <outlet property="createEventButton" destination="oeB-Wi-api" id="G4z-eA-8a6"/>
                         <outlet property="eventsScroll" destination="VWJ-cb-wXo" id="ajE-dq-h97"/>
                         <outlet property="newsScroll" destination="X7C-5w-WnW" id="7nZ-Xk-ZSp"/>
-                        <outlet property="tableView" destination="hTq-yb-kmJ" id="NZt-BS-pJC"/>
+                        <outlet property="streamScroll" destination="QXA-Dz-zny" id="NWr-w3-wMk"/>
                         <segue destination="Pc7-fx-VUh" kind="show" id="nFQ-TY-Z08"/>
                     </connections>
                 </viewController>
