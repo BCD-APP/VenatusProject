@@ -81,7 +81,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, EventViewControlle
         if let image = image{
             annoImage = image
         }
+        Events.zhi_instance.eventCreated()
         addPin(latitude, lon: longitude, title: title)
+        
     }
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {

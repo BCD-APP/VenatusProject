@@ -17,6 +17,10 @@
 		916E835F1C8FEA5300B33DB7 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E835E1C8FEA5300B33DB7 /* Format.swift */; };
 		916E83611C8FEA9A00B33DB7 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83601C8FEA9A00B33DB7 /* News.swift */; };
 		916E83631C8FEBDC00B33DB7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83621C8FEBDC00B33DB7 /* Profile.swift */; };
+		917758711CD04F3E00E6AB01 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917758701CD04F3E00E6AB01 /* PopViewController.swift */; };
+		917758751CD04F6B00E6AB01 /* Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917758741CD04F6B00E6AB01 /* Tiles.swift */; };
+		917758771CD04F7400E6AB01 /* Tiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 917758761CD04F7400E6AB01 /* Tiles.xib */; };
+		917758791CD0509E00E6AB01 /* TileObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917758781CD0509E00E6AB01 /* TileObj.swift */; };
 		917C32BB1C90EB1B00D4027D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C32BA1C90EB1B00D4027D /* Post.swift */; };
 		917C32BD1C90FDAF00D4027D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C32BC1C90FDAF00D4027D /* Game.swift */; };
 		917C32BF1C9103A800D4027D /* NewsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C32BE1C9103A800D4027D /* NewsParser.swift */; };
@@ -51,6 +55,10 @@
 		916E835E1C8FEA5300B33DB7 /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		916E83601C8FEA9A00B33DB7 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		916E83621C8FEBDC00B33DB7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		917758701CD04F3E00E6AB01 /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		917758741CD04F6B00E6AB01 /* Tiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiles.swift; sourceTree = "<group>"; };
+		917758761CD04F7400E6AB01 /* Tiles.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tiles.xib; sourceTree = "<group>"; };
+		917758781CD0509E00E6AB01 /* TileObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileObj.swift; sourceTree = "<group>"; };
 		917C32BA1C90EB1B00D4027D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		917C32BC1C90FDAF00D4027D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		917C32BE1C9103A800D4027D /* NewsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsParser.swift; sourceTree = "<group>"; };
@@ -104,9 +112,9 @@
 		916E83531C8FE77700B33DB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				917758721CD04F4200E6AB01 /* MainGroup */,
 				91EA8DD41CCF9B7300B059A9 /* MapEventsSubGroup */,
 				916E83561C8FE7F100B33DB7 /* LoginViewController.swift */,
-				916E83581C8FE7FC00B33DB7 /* MainViewController.swift */,
 				916E835A1C8FE81200B33DB7 /* ViewingProfileViewController.swift */,
 				916E835C1C8FE83500B33DB7 /* ProfileViewController.swift */,
 				91B0CBE41C99A4160068F948 /* RegistrationViewController.swift */,
@@ -119,6 +127,7 @@
 		916E83551C8FE78F00B33DB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				917758731CD04F5900E6AB01 /* Tiles */,
 				91EA8DD31CCF913100B059A9 /* Singletons */,
 				916E835E1C8FEA5300B33DB7 /* Format.swift */,
 				916E83601C8FEA9A00B33DB7 /* News.swift */,
@@ -132,6 +141,25 @@
 				91EA8DCB1CCF376D00B059A9 /* GameCell.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		917758721CD04F4200E6AB01 /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				916E83581C8FE7FC00B33DB7 /* MainViewController.swift */,
+				917758701CD04F3E00E6AB01 /* PopViewController.swift */,
+			);
+			name = MainGroup;
+			sourceTree = "<group>";
+		};
+		917758731CD04F5900E6AB01 /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				917758741CD04F6B00E6AB01 /* Tiles.swift */,
+				917758761CD04F7400E6AB01 /* Tiles.xib */,
+				917758781CD0509E00E6AB01 /* TileObj.swift */,
+			);
+			name = Tiles;
 			sourceTree = "<group>";
 		};
 		9182973B1C8FCFA700AC4266 = {
@@ -288,6 +316,7 @@
 				918297521C8FCFA700AC4266 /* LaunchScreen.storyboard in Resources */,
 				9182974F1C8FCFA700AC4266 /* Assets.xcassets in Resources */,
 				9182974D1C8FCFA700AC4266 /* Main.storyboard in Resources */,
+				917758771CD04F7400E6AB01 /* Tiles.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +378,7 @@
 				91EA8DD21CCF912500B059A9 /* Events.swift in Sources */,
 				91EA8DCC1CCF376E00B059A9 /* GameCell.swift in Sources */,
 				916E83571C8FE7F100B33DB7 /* LoginViewController.swift in Sources */,
+				917758791CD0509E00E6AB01 /* TileObj.swift in Sources */,
 				91924B591CB4A152006B3FDA /* SWRevealViewController.m in Sources */,
 				917C32BD1C90FDAF00D4027D /* Game.swift in Sources */,
 				916E83631C8FEBDC00B33DB7 /* Profile.swift in Sources */,
@@ -362,10 +392,12 @@
 				91EA8DC81CCF22C100B059A9 /* GamesList.swift in Sources */,
 				917C32BF1C9103A800D4027D /* NewsParser.swift in Sources */,
 				91FAFD711CB73CF4004212FF /* Tweets.swift in Sources */,
+				917758711CD04F3E00E6AB01 /* PopViewController.swift in Sources */,
 				91EA8DC61CCF20E800B059A9 /* GamePopViewController.swift in Sources */,
 				91E8A9191C9B930E00564DA2 /* User.swift in Sources */,
 				916E835D1C8FE83500B33DB7 /* ProfileViewController.swift in Sources */,
 				916E83611C8FEA9A00B33DB7 /* News.swift in Sources */,
+				917758751CD04F6B00E6AB01 /* Tiles.swift in Sources */,
 				918297481C8FCFA700AC4266 /* AppDelegate.swift in Sources */,
 				91A7315C1C983C5E009D4E44 /* SteamClient.swift in Sources */,
 				91924B5B1CB4A295006B3FDA /* SideViewController.swift in Sources */,
