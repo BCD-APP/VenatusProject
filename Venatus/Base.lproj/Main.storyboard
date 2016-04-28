@@ -274,24 +274,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-xp-n9r">
-                                <rect key="frame" x="20" y="256" width="54" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qt6-kM-cbd">
-                                <rect key="frame" x="97" y="253" width="214" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIH-Ra-cBP">
-                                <rect key="frame" x="94" y="304" width="135" height="30"/>
-                                <state key="normal" title="Add Game To Pofile"/>
-                                <connections>
-                                    <action selector="addGameClicked:" destination="Rfr-tl-dYW" eventType="touchUpInside" id="bRa-qf-VE4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-nr-kir">
                                 <rect key="frame" x="117" y="342" width="86" height="30"/>
                                 <state key="normal" title="Add A Game"/>
@@ -334,12 +316,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="addAGame" destination="XwG-nr-kir" id="XCy-1J-hfo"/>
-                        <outlet property="addGameButton" destination="rIH-Ra-cBP" id="vK0-UU-bjI"/>
                         <outlet property="avatarImage" destination="QOy-AY-vE6" id="yZO-JR-3Q5"/>
                         <outlet property="birthdayLabel" destination="cAc-5x-rbU" id="i73-jm-vpw"/>
                         <outlet property="cameraButton" destination="DwM-vN-MuU" id="ylQ-Uj-mGY"/>
                         <outlet property="collectionView" destination="wRQ-xa-K7v" id="sme-eZ-gn4"/>
-                        <outlet property="gameTextfield" destination="qt6-kM-cbd" id="oH0-E0-LOY"/>
                         <outlet property="logoutButton" destination="1xU-Cf-igF" id="omy-fc-LZo"/>
                         <outlet property="photoLibraryButton" destination="zrE-Hl-SEL" id="uGl-8e-Jos"/>
                         <outlet property="setAvatarButton" destination="K6k-Lw-LoT" id="TYc-RU-7gy"/>

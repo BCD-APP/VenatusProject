@@ -19,8 +19,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var avatarImage: UIImageView!
     
     
-    @IBOutlet var gameTextfield: UITextField! //Refactor into drop down menu of options
-    @IBOutlet var addGameButton: UIButton! //Maybe refactor probably not
+    /*@IBOutlet var gameTextfield: UITextField! //Refactor into drop down menu of options
+    @IBOutlet var addGameButton: UIButton! //Maybe refactor probably not*/
     @IBOutlet var addAGame: UIButton!
     
     
@@ -151,7 +151,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func addGameClicked(sender: UIButton) {
+    /*@IBAction func addGameClicked(sender: UIButton) {
         let nameOfGame = gameTextfield.text
         if let nameOfGame = nameOfGame{
             print("Creating game to add")
@@ -161,7 +161,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }else{
             print("Field is nil nothing added")
         }
-    }
+    }*/
     
     @IBAction func clickedAdd(sender: UIButton) {
         performSegueWithIdentifier("PopSegue", sender: self)
