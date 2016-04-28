@@ -18,6 +18,13 @@ class Profile{
     var avatar: UIImage?
     
     var games: [Game]?
+    
+    var image1: UIImageView?
+    var image2: UIImageView?
+    
+    func addImage1(addImage: UIImageView){
+        image1 = addImage
+    }
 
     
     
