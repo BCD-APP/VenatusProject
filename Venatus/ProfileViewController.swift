@@ -194,6 +194,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 let gameToAdd = Game(NameOfGame: name)
                 print("Adding game")
                 Profile.Ven_UserProfile.addGameToProfile(gameToAdd)
+            TwitchData.sharedInstance.grabJSON(name)
         }
     }
     

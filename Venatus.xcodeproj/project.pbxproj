@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		401C9644E0312C7973CA7061 /* Pods_Venatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B286B455C632B8369228D17C /* Pods_Venatus.framework */; };
+		91526C741CD1ED7B00187A98 /* TwitchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91526C731CD1ED7B00187A98 /* TwitchData.swift */; };
+		91526C771CD1ED9700187A98 /* TwitchObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91526C761CD1ED9700187A98 /* TwitchObject.swift */; };
+		91526C791CD1FD8E00187A98 /* TwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91526C781CD1FD8E00187A98 /* TwitchViewController.swift */; };
 		916AEE9E1CA4D4FE00884225 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEE9D1CA4D4FE00884225 /* MapViewController.swift */; };
 		916AEEA01CA4D74900884225 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEE9F1CA4D74900884225 /* EventViewController.swift */; };
 		916E83571C8FE7F100B33DB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E83561C8FE7F100B33DB7 /* LoginViewController.swift */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		470DE717945F63A3BFE16E79 /* Pods-Venatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Venatus/Pods-Venatus.debug.xcconfig"; sourceTree = "<group>"; };
+		91526C731CD1ED7B00187A98 /* TwitchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchData.swift; sourceTree = "<group>"; };
+		91526C761CD1ED9700187A98 /* TwitchObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchObject.swift; sourceTree = "<group>"; };
+		91526C781CD1FD8E00187A98 /* TwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchViewController.swift; sourceTree = "<group>"; };
 		916AEE9D1CA4D4FE00884225 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		916AEE9F1CA4D74900884225 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		916E83561C8FE7F100B33DB7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		91526C751CD1ED8300187A98 /* Twitch */ = {
+			isa = PBXGroup;
+			children = (
+				91526C731CD1ED7B00187A98 /* TwitchData.swift */,
+				91526C761CD1ED9700187A98 /* TwitchObject.swift */,
+			);
+			name = Twitch;
+			sourceTree = "<group>";
+		};
 		916E83531C8FE77700B33DB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +142,7 @@
 		916E83551C8FE78F00B33DB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				91526C751CD1ED8300187A98 /* Twitch */,
 				917758731CD04F5900E6AB01 /* Tiles */,
 				91EA8DD31CCF913100B059A9 /* Singletons */,
 				916E835E1C8FEA5300B33DB7 /* Format.swift */,
@@ -148,6 +164,7 @@
 			children = (
 				916E83581C8FE7FC00B33DB7 /* MainViewController.swift */,
 				917758701CD04F3E00E6AB01 /* PopViewController.swift */,
+				91526C781CD1FD8E00187A98 /* TwitchViewController.swift */,
 			);
 			name = MainGroup;
 			sourceTree = "<group>";
@@ -397,10 +414,13 @@
 				91E8A9191C9B930E00564DA2 /* User.swift in Sources */,
 				916E835D1C8FE83500B33DB7 /* ProfileViewController.swift in Sources */,
 				916E83611C8FEA9A00B33DB7 /* News.swift in Sources */,
+				91526C741CD1ED7B00187A98 /* TwitchData.swift in Sources */,
+				91526C771CD1ED9700187A98 /* TwitchObject.swift in Sources */,
 				917758751CD04F6B00E6AB01 /* Tiles.swift in Sources */,
 				918297481C8FCFA700AC4266 /* AppDelegate.swift in Sources */,
 				91A7315C1C983C5E009D4E44 /* SteamClient.swift in Sources */,
 				91924B5B1CB4A295006B3FDA /* SideViewController.swift in Sources */,
+				91526C791CD1FD8E00187A98 /* TwitchViewController.swift in Sources */,
 				916E83591C8FE7FC00B33DB7 /* MainViewController.swift in Sources */,
 				917C32BB1C90EB1B00D4027D /* Post.swift in Sources */,
 				91EA8DD61CCF9B9000B059A9 /* ViewEventViewController.swift in Sources */,

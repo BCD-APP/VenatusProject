@@ -15,6 +15,8 @@ class Tiles: UIView {
     
     var tileObj = TileObj()
     
+    var zh_twitchObject: TwitchObject?
+    
     var z_labelText: String?{
         didSet{
             if let labelText = z_labelText{
@@ -62,10 +64,19 @@ class Tiles: UIView {
     func setText(text: String){
         z_contentText = text
     }
-    func setTileContentImage(image: UIImage){
-        z_contentSet = image
+    func setTileContentImage(image: UIImage?, imageStr: String?){
+        if let image = image{
+            print("SET IMAGE")
+            z_contentSet = image
+        }
+        if let imageStr = imageStr{
+            zh_content.setImageWithURL(NSURL(string: imageStr)!)
+        }
     }
     func setTitle(text: String){
         z_labelText = text
+    }
+    func setSpecialData(special: TwitchObject){
+        zh_twitchObject = special
     }
 }

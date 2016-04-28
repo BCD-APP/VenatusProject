@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class MainViewController: UIViewController, /*UITableViewDataSource, UITableViewDelegate, */UIPopoverPresentationControllerDelegate {
 
@@ -16,6 +17,8 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
     var newsArray: [News]?
 
     var tempArray: [Tweets]?
+    
+    var streamArray: [TwitchObject]?
     
     @IBOutlet var createEventButton: UIButton!
     @IBOutlet var tableView: UITableView!
@@ -69,7 +72,7 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
         while (scroll1count > allocated) {
             print("INSIDE SCROLL COUNT WHILE LOOP")
             let frame = CGRectMake(currentXOffset, currentYOffset, 150, 150).insetBy(dx: 5, dy: 5)
-            createTile(frame, title: "News", content: tempArray![allocated].text as! String)
+            createTile(frame, title: "News", content: tempArray![allocated].text as! String, scroll: newsScroll, imageStr: nil, specialData: nil)
             allocated++
             threecount = (threecount + 1) % 3
             if(threecount == 0){
@@ -90,7 +93,7 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
         if scroll2count > 3{
             contentHeight = CGFloat(165) * (CGFloat(scroll2count+1)/3) + CGFloat(10)//scrollView.bounds.height * 3 // change this based on # of items. CGFloat 150(tile) x ( # / 3) if # < 3 set # to 3.
         }
-        newsScroll.contentSize = CGSizeMake(contentWidth, contentHeight)
+        eventsScroll.contentSize = CGSizeMake(contentWidth, contentHeight)
         var currentXOffset = CGFloat(0)
         var currentYOffset = CGFloat(0)
         let subviewEdge = CGFloat(150)
@@ -99,7 +102,7 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
         while (scroll2count > allocated) {
             print("INSIDE SCROLL COUNT WHILE LOOP")
             let frame = CGRectMake(currentXOffset, currentYOffset, 150, 150).insetBy(dx: 5, dy: 5)
-            createTile(frame, title: "Events", content: eventInstance.z_Events[allocated])
+            createTile(frame, title: "Events", content: eventInstance.z_Events[allocated], scroll: eventsScroll, imageStr: nil, specialData: nil)
             allocated++
             threecount = (threecount + 1) % 3
             if(threecount == 0){
@@ -113,15 +116,16 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
     
     
     func scrollViewPopulateStreams(){
+        streamArray = TwitchData.sharedInstance.array
         let contentWidth = CGFloat(450)
         var contentHeight = CGFloat(200)
-        let scroll3count = 0 /* Stream stuff *///eventInstance.z_Events.count
+        let scroll3count = streamArray!.count /* Stream stuff *///eventInstance.z_Events.count
         var threecount = 0
         var allocated = 0
         if scroll3count > 3{
             contentHeight = CGFloat(165) * (CGFloat(scroll3count+1)/3) + CGFloat(10)//scrollView.bounds.height * 3 // change this based on # of items. CGFloat 150(tile) x ( # / 3) if # < 3 set # to 3.
         }
-        newsScroll.contentSize = CGSizeMake(contentWidth, contentHeight)
+        streamScroll.contentSize = CGSizeMake(contentWidth, contentHeight)
         var currentXOffset = CGFloat(0)
         var currentYOffset = CGFloat(0)
         let subviewEdge = CGFloat(150)
@@ -130,7 +134,7 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
         while (scroll3count > allocated) {
             print("INSIDE SCROLL COUNT WHILE LOOP")
             let frame = CGRectMake(currentXOffset, currentYOffset, 150, 150).insetBy(dx: 5, dy: 5)
-            createTile(frame, title: "Streams", content: "STREAM INFORMATION")
+            createTile(frame, title: "Streams", content: "STREAM INFORMATION", scroll: streamScroll, imageStr: streamArray![allocated].zhi_previewString, specialData: streamArray![allocated])
             allocated++
             threecount = (threecount + 1) % 3
             if(threecount == 0){
@@ -143,15 +147,22 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
     }
     
     
-    func createTile(frame: CGRect, title: String, content: String){
+    func createTile(frame: CGRect, title: String, content: String, scroll: UIScrollView, imageStr: String?, specialData: AnyObject?){
         let tile = Tiles(frame: frame)
         tile.z_labelText = title
         tile.z_contentText = content
+        if let imageStr = imageStr{
+            tile.setTileContentImage(nil, imageStr: imageStr)
+        }
+        if let specialData = specialData{
+            //atm the only special data is with twitchData. remove imageStr for special data mayhaps?
+            tile.setSpecialData(specialData as! TwitchObject)
+        }
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tappedTile:")
         tile.userInteractionEnabled = true
         tapGestureRecognizer.numberOfTapsRequired = 2
         tile.addGestureRecognizer(tapGestureRecognizer)
-        newsScroll.addSubview(tile)
+        scroll.addSubview(tile)
     }
     
     
@@ -167,13 +178,18 @@ class MainViewController: UIViewController, /*UITableViewDataSource, UITableView
         let vc = storyboard.instantiateViewControllerWithIdentifier("popvc") as! PopViewController
         vc.modalPresentationStyle = .Popover
         let popoverMenuViewController = vc.popoverPresentationController
-        popoverMenuViewController?.permittedArrowDirections = .Down
+        popoverMenuViewController?.permittedArrowDirections = .Any
         popoverMenuViewController?.delegate = self
         popoverMenuViewController?.sourceView = self.newsScroll
         popoverMenuViewController?.sourceRect = frame //(sender.view?.frame)!//CGRectMake(400, 300, 200, 200)
         self.presentViewController(vc, animated: true, completion: nil)
         vc.contentText.text = tile.z_contentText
         vc.titleLabel.text = tile.z_labelText
+        vc.contentImage.image = tile.zh_content.image
+        if tile.zh_title.text == "Streams"{
+            vc.setStreamSegue()
+            vc.popTwitchObject = tile.zh_twitchObject
+        }
     }
     
     
